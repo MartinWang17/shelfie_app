@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { Link } from 'expo-router';
 
 const Home = () => {
     return (
@@ -9,6 +10,9 @@ const Home = () => {
             <Text style={{ marginTop: 10, marginBottom: 30 }}>
                 market place app for students!
             </Text>
+
+            <Link href="/about" style={styles.link}>About</Link>
+            <Link href="/contact" style={styles.link}>Contact</Link>
 
         </View>
     )
@@ -27,5 +31,9 @@ const styles = StyleSheet.create({
     },
     img: {
         marginVertical: 20,
-    }
+    },
+    link: {
+        marginVertical: 10,
+        borderBottomWidth: 1,
+    },
 })
